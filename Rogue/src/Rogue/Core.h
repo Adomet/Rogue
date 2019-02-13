@@ -10,3 +10,4 @@
 	#error Rogue only supports Wýndows!
 #endif
    
+#define BIT(x) (1 << x)

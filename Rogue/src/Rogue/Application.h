@@ -1,6 +1,7 @@
 #pragma once
 
-#include "core.h"
+#include "Core.h"
+#include "Event/Event.h"
 
 namespace Rogue {
 

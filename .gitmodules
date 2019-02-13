@@ -1,0 +1,3 @@
+[submodule "Rogue/vendor/spdlog"]
+	path = Rogue/vendor/spdlog
+	url = https://github.com/gabime/spdlog
