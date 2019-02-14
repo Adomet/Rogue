@@ -1,5 +1,4 @@
 #include <Rogue.h>
-
 class Sandbox : public Rogue::Application
 {
 public :

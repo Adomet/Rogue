@@ -1,3 +1,4 @@
+#include "rgpch.h"
 #include "Application.h"
 
 #include "Rogue/Events/ApplicationEvent.h"
