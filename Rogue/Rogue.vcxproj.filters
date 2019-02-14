@@ -35,6 +35,10 @@
       <Filter>Rogue</Filter>
     </ClInclude>
     <ClInclude Include="src\rgpch.h" />
+    <ClInclude Include="src\Rogue\Window.h">
+      <Filter>Rogue</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Rogue\Application.cpp">
@@ -44,5 +48,6 @@
       <Filter>Rogue</Filter>
     </ClCompile>
     <ClCompile Include="src\rgpch.cpp" />
+    <ClCompile Include="WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

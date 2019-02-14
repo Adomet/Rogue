@@ -10,6 +10,12 @@ workspace "Rogue"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder(solution dir)
+IncludeDir ={}
+IncludeDir["GLFW"] = "Rogue/vendor/GLFW/include"
+
+include "Rogue/vendor/GLFW"
+
 project "Rogue"
 	location "Rogue"
 	kind "SharedLib"
@@ -30,7 +36,14 @@ project "Rogue"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

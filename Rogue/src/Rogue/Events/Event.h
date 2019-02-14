@@ -1,5 +1,6 @@
 #pragma once
 
+#include "rgpch.h"
 #include "Rogue/Core.h"
 
 namespace Rogue {
