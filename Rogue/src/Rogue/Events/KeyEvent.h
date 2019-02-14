@@ -1,12 +1,12 @@
 #pragma once
 
 #include "Event.h"
-#include <sstream>
 
+#include <sstream>
 
 namespace Rogue {
 
-	class ROGUE_API KeyEvent :public Event
+	class ROGUE_API KeyEvent : public Event
 	{
 	public:
 		inline int GetKeyCode() const { return m_KeyCode; }
@@ -14,47 +14,44 @@ namespace Rogue {
 		EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput)
 	protected:
 		KeyEvent(int keycode)
-			: m_KeyCode(keycode){}
+			: m_KeyCode(keycode) {}
+
 		int m_KeyCode;
 	};
 
 	class ROGUE_API KeyPressedEvent : public KeyEvent
 	{
 	public:
-		KeyPressedEvent(int keycode ,int repeatCount)
-			:KeyEvent(keycode), m_RepeatCount(repeatCount){}
+		KeyPressedEvent(int keycode, int repeatCount)
+			: KeyEvent(keycode), m_RepeatCount(repeatCount) {}
 
 		inline int GetRepeatCount() const { return m_RepeatCount; }
 
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "KeyPressedEvent" << m_KeyCode << " (" << m_RepeatCount << " repats";
+			ss << "KeyPressedEvent: " << m_KeyCode << " (" << m_RepeatCount << " repeats)";
 			return ss.str();
 		}
 
 		EVENT_CLASS_TYPE(KeyPressed)
 	private:
 		int m_RepeatCount;
-
 	};
 
 	class ROGUE_API KeyReleasedEvent : public KeyEvent
 	{
 	public:
 		KeyReleasedEvent(int keycode)
-			:KeyEvent(keycode) {}
-
+			: KeyEvent(keycode) {}
 
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "KeyReleasedEvent" << m_KeyCode;
+			ss << "KeyReleasedEvent: " << m_KeyCode;
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(KeyReleased);
-
+		EVENT_CLASS_TYPE(KeyReleased)
 	};
-
 }

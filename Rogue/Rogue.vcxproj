@@ -78,7 +78,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>RG_PLATFORM_WINDOWS;RG_BUILD_DLL;HZ_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>RG_PLATFORM_WINDOWS;RG_BUILD_DLL;RG_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
@@ -98,7 +98,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>RG_PLATFORM_WINDOWS;RG_BUILD_DLL;HZ_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>RG_PLATFORM_WINDOWS;RG_BUILD_DLL;RG_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -122,7 +122,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>RG_PLATFORM_WINDOWS;RG_BUILD_DLL;HZ_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>RG_PLATFORM_WINDOWS;RG_BUILD_DLL;RG_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -147,10 +147,10 @@
     <ClInclude Include="src\Rogue\Application.h" />
     <ClInclude Include="src\Rogue\Core.h" />
     <ClInclude Include="src\Rogue\EntryPoint.h" />
-    <ClInclude Include="src\Rogue\Event\ApplicationEvent.h" />
-    <ClInclude Include="src\Rogue\Event\Event.h" />
-    <ClInclude Include="src\Rogue\Event\KeyEvent.h" />
-    <ClInclude Include="src\Rogue\Event\MouseEvent.h" />
+    <ClInclude Include="src\Rogue\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Rogue\Events\Event.h" />
+    <ClInclude Include="src\Rogue\Events\KeyEvent.h" />
+    <ClInclude Include="src\Rogue\Events\MouseEvent.h" />
     <ClInclude Include="src\Rogue\Log.h" />
   </ItemGroup>
   <ItemGroup>

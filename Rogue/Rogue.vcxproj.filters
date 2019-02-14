@@ -4,8 +4,8 @@
     <Filter Include="Rogue">
       <UniqueIdentifier>{277D090E-9391-31BF-5C13-D51EC8E62DF0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Rogue\Event">
-      <UniqueIdentifier>{B8FF570D-24B5-D002-ADA9-CAD9195EC706}</UniqueIdentifier>
+    <Filter Include="Rogue\Events">
+      <UniqueIdentifier>{2BF757B8-175A-E75C-C0DF-1F13AC21B3DF}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -19,17 +19,17 @@
     <ClInclude Include="src\Rogue\EntryPoint.h">
       <Filter>Rogue</Filter>
     </ClInclude>
-    <ClInclude Include="src\Rogue\Event\ApplicationEvent.h">
-      <Filter>Rogue\Event</Filter>
+    <ClInclude Include="src\Rogue\Events\ApplicationEvent.h">
+      <Filter>Rogue\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Rogue\Event\Event.h">
-      <Filter>Rogue\Event</Filter>
+    <ClInclude Include="src\Rogue\Events\Event.h">
+      <Filter>Rogue\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Rogue\Event\KeyEvent.h">
-      <Filter>Rogue\Event</Filter>
+    <ClInclude Include="src\Rogue\Events\KeyEvent.h">
+      <Filter>Rogue\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Rogue\Event\MouseEvent.h">
-      <Filter>Rogue\Event</Filter>
+    <ClInclude Include="src\Rogue\Events\MouseEvent.h">
+      <Filter>Rogue\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Rogue\Log.h">
       <Filter>Rogue</Filter>

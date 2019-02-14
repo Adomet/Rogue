@@ -1,9 +1,9 @@
 #include "Application.h"
 
-#include "Rogue/Event/ApplicationEvent.h"
+#include "Rogue/Events/ApplicationEvent.h"
 #include "Rogue/Log.h"
-namespace Rogue {
 
+namespace Rogue {
 
 	Application::Application()
 	{
@@ -13,10 +13,20 @@ namespace Rogue {
 	Application::~Application()
 	{
 	}
+
 	void Application::Run()
 	{
-		WindowResizeEvent e(1200, 720);
-		RG_TRACE(e);
+		WindowResizeEvent e(1280, 720);
+		if (e.IsInCategory(EventCategoryApplication))
+		{
+			RG_TRACE(e);
+		}
+		if (e.IsInCategory(EventCategoryInput))
+		{
+			RG_TRACE(e);
+		}
+
 		while (true);
 	}
+
 }
