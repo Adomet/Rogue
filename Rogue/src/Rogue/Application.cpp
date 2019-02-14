@@ -20,11 +20,11 @@ namespace Rogue {
 		WindowResizeEvent e(1280, 720);
 		if (e.IsInCategory(EventCategoryApplication))
 		{
-			RG_TRACE(e);
+			HZ_TRACE(e);
 		}
 		if (e.IsInCategory(EventCategoryInput))
 		{
-			RG_TRACE(e);
+			HZ_TRACE(e);
 		}
 
 		while (true);

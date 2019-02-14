@@ -1,15 +1,18 @@
 #include <Rogue.h>
+
 class Sandbox : public Rogue::Application
 {
-public :
+public:
 	Sandbox()
 	{
-		
+
 	}
+
 	~Sandbox()
 	{
 
 	}
+
 };
 
 Rogue::Application* Rogue::CreateApplication()

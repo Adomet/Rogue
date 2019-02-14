@@ -2,7 +2,6 @@
 
 #include "Event.h"
 
-
 namespace Rogue {
 
 	class ROGUE_API MouseMovedEvent : public Event

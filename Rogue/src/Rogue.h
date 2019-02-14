@@ -1,10 +1,10 @@
 #pragma once
 
-// For use by Rogue application
+// For use by Hazel applications
 
 #include "Rogue/Application.h"
 #include "Rogue/Log.h"
 
-// ---------------Entry Point----------
+// ---Entry Point---------------------
 #include "Rogue/EntryPoint.h"
-//-------------------------------------
+// -----------------------------------

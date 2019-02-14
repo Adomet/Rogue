@@ -6,7 +6,7 @@ extern Rogue::Application* Rogue::CreateApplication();
 
 int main(int argc, char** argv)
 {
-	Rogue::Log::Init();
+	Hazel::Log::Init();
 	RG_CORE_WARN("Initialized Log!");
 	int a = 5;
 	RG_INFO("Hello! Var={0}", a);
