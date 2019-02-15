@@ -26,6 +26,8 @@ namespace Rogue {
 		unsigned int m_Width, m_Height;
 	};
 
+
+
 	class ROGUE_API WindowCloseEvent : public Event
 	{
 	public:

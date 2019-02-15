@@ -8,7 +8,7 @@ int main(int argc, char** argv)
 {
 	Rogue::Log::Init();
 	RG_CORE_WARN("Initialized Log!");
-	int a = 5;
+	int a = 4;
 	RG_INFO("Hello! Var={0}", a);
 
 	auto app = Rogue::CreateApplication();
