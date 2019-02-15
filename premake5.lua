@@ -1,5 +1,6 @@
 workspace "Rogue"
 	architecture "x64"
+	startproject "Sandbox"
 
 	configurations
 	{
@@ -10,8 +11,8 @@ workspace "Rogue"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
--- Include directories relative to root folder(solution dir)
-IncludeDir ={}
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
 IncludeDir["GLFW"] = "Rogue/vendor/GLFW/include"
 IncludeDir["Glad"] = "Rogue/vendor/Glad/include"
 IncludeDir["ImGui"] = "Rogue/vendor/imgui"
@@ -19,9 +20,6 @@ IncludeDir["ImGui"] = "Rogue/vendor/imgui"
 include "Rogue/vendor/GLFW"
 include "Rogue/vendor/Glad"
 include "Rogue/vendor/imgui"
-
-startproject "Sandbox"
-
 
 project "Rogue"
 	location "Rogue"
@@ -50,8 +48,8 @@ project "Rogue"
 		"%{IncludeDir.ImGui}"
 	}
 
-	links
-	{
+	links 
+	{ 
 		"GLFW",
 		"Glad",
 		"ImGui",
@@ -60,7 +58,6 @@ project "Rogue"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -72,7 +69,7 @@ project "Rogue"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 
 	filter "configurations:Debug"
@@ -118,7 +115,6 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -126,7 +122,7 @@ project "Sandbox"
 			"RG_PLATFORM_WINDOWS"
 		}
 
-    filter "configurations:Debug"
+	filter "configurations:Debug"
 		defines "RG_DEBUG"
 		runtime "Debug"
 		symbols "On"

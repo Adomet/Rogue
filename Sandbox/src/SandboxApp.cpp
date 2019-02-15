@@ -11,7 +11,7 @@ public:
 
 	void OnUpdate() override
 	{
-		RG_INFO("ExampleLayer::Update");
+		//RG_INFO("ExampleLayer::Update");
 	}
 
 	void OnEvent(Rogue::Event& event) override
@@ -20,10 +20,6 @@ public:
 	}
 
 };
-
-
-
-
 
 
 class Sandbox : public Rogue::Application
