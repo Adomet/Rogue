@@ -20,10 +20,14 @@ include "Rogue/vendor/GLFW"
 include "Rogue/vendor/Glad"
 include "Rogue/vendor/imgui"
 
+startproject "Sandbox"
+
+
 project "Rogue"
 	location "Rogue"
 	kind "SharedLib"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -73,23 +77,24 @@ project "Rogue"
 
 	filter "configurations:Debug"
 		defines "RG_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "RG_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "RG_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -121,17 +126,17 @@ project "Sandbox"
 			"RG_PLATFORM_WINDOWS"
 		}
 
-	filter "configurations:Debug"
+    filter "configurations:Debug"
 		defines "RG_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "RG_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "RG_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
