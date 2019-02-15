@@ -13,8 +13,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder(solution dir)
 IncludeDir ={}
 IncludeDir["GLFW"] = "Rogue/vendor/GLFW/include"
+IncludeDir["Glad"] = "Rogue/vendor/Glad/include"
+IncludeDir["ImGui"] = "Rogue/vendor/imgui"
 
 include "Rogue/vendor/GLFW"
+include "Rogue/vendor/Glad"
+include "Rogue/vendor/imgui"
 
 project "Rogue"
 	location "Rogue"
@@ -37,12 +41,16 @@ project "Rogue"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
@@ -54,7 +62,8 @@ project "Rogue"
 		defines
 		{
 			"RG_PLATFORM_WINDOWS",
-			"RG_BUILD_DLL"
+			"RG_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
