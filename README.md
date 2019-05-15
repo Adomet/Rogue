@@ -1,2 +1,2 @@
 # Rogue
-Rogue Engine
+Rogue Game Engine
